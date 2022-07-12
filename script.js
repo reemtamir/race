@@ -5,13 +5,16 @@ var car2Horn = new Audio('sound/car2.wav');
 var win = new Audio('sound/win.mp3');
 
 const car1 = {
-  margin: 10,
-  speed: 10,
+  margin: Math.floor(Math.random() * 10) + 1,
+  speed: Math.floor(Math.random() * 15) + 5,
 };
+
 const car2 = {
-  margin: 10,
-  speed: 15,
+  margin: Math.floor(Math.random() * 10) + 1,
+  speed: Math.floor(Math.random() * 15) + 5,
 };
+console.log(car1);
+console.log(car2);
 var interval;
 var interval2;
 interval = setInterval(moveFirstCar, 300);
@@ -30,6 +33,7 @@ function moveFirstCar() {
     clearInterval(interval);
     document.querySelector('.flag').classList.remove('d-none');
     win.play();
+    document.querySelector('.h1').innerHTML = 'WIN 🏆';
   }
 
   if (car1.margin >= 1200)
@@ -47,6 +51,7 @@ function moveSecondCar() {
     clearInterval(interval2);
     document.querySelector('.flag').classList.remove('d-none');
     win.play();
+    document.querySelector('.h1').innerHTML = 'WIN 🏆';
   }
   if (car2.margin >= 1200)
     document.querySelector('.h1').classList.remove('d-none');
