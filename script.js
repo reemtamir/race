@@ -2,6 +2,7 @@
 // const car1Horn =  new Audio('');
 var car1Horn = new Audio('sound/car1.wav');
 var car2Horn = new Audio('sound/car2.wav');
+var win = new Audio('sound/win.mp3');
 
 const car1 = {
   margin: 10,
@@ -28,6 +29,7 @@ function moveFirstCar() {
   if (car1.margin >= 1400 || car2.margin >= 1400) {
     clearInterval(interval);
     document.querySelector('.flag').classList.remove('d-none');
+    win.play();
   }
 
   if (car1.margin >= 1200)
@@ -44,6 +46,7 @@ function moveSecondCar() {
   if (car2.margin >= 1400 || car1.margin >= 1400) {
     clearInterval(interval2);
     document.querySelector('.flag').classList.remove('d-none');
+    win.play();
   }
   if (car2.margin >= 1200)
     document.querySelector('.h1').classList.remove('d-none');
