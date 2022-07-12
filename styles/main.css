@@ -1,0 +1,27 @@
+div {
+  width: 250px;
+  min-height: 200px;
+}
+div.car1 {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+}
+div.car1 > img {
+  transform: rotate(180deg);
+}
+div.car2 {
+  position: absolute;
+  right: 20px;
+  top: 280px;
+}
+
+.road {
+  margin: auto;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  background-color: black;
+  width: 1900px;
+  height: 500px;
+}/*# sourceMappingURL=main.css.map */
