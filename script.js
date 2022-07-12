@@ -37,7 +37,7 @@ function moveBlueCar() {
 
   car2Div.style.marginRight = car2.margin + car2.speed + 'px';
   car2.margin = car2.margin + car2.speed;
-  if (car2.margin >= 1400 || car2.margin >= 1400) clearInterval(interval2);
+  if (car2.margin >= 1400 || car1.margin >= 1400) clearInterval(interval2);
   if (car2.margin >= 1300)
     document.querySelector('.d-none').classList.remove('d-none');
 }
