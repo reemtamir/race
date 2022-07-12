@@ -13,12 +13,12 @@ const car2 = {
 };
 var interval;
 var interval2;
-interval = setInterval(moveRedCar, 300);
-interval2 = setInterval(moveBlueCar, 300);
+interval = setInterval(moveFirstCar, 300);
+interval2 = setInterval(moveSecondCar, 300);
 const car1Div = document.querySelector('.car1');
 const car2Div = document.querySelector('.car2');
 
-function moveRedCar() {
+function moveFirstCar() {
   car1Div.addEventListener('click', function () {
     car1Horn.play();
     car1Horn.currentTime = 0;
@@ -29,7 +29,7 @@ function moveRedCar() {
   if (car1.margin >= 1200)
     document.querySelector('.d-none').classList.remove('d-none');
 }
-function moveBlueCar() {
+function moveSecondCar() {
   car2Div.addEventListener('click', function () {
     car2Horn.play();
     car2Horn.currentTime = 0;
