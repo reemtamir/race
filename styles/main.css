@@ -24,4 +24,20 @@ div.car2 {
   background-color: black;
   width: 1800px;
   height: 500px;
+}
+
+.line {
+  width: 2000px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 250px;
+}
+
+.victory {
+  width: 5px;
+  height: 500px;
+  background-color: red;
+  position: absolute;
+  left: 250px;
 }/*# sourceMappingURL=main.css.map */
