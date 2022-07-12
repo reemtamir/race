@@ -1,6 +1,6 @@
 div {
   width: 250px;
-  min-height: 200px;
+  height: 200px;
 }
 div.car1 {
   position: absolute;
@@ -22,6 +22,6 @@ div.car2 {
   top: 30%;
   left: 5%;
   background-color: black;
-  width: 1900px;
+  width: 1700px;
   height: 500px;
 }/*# sourceMappingURL=main.css.map */
