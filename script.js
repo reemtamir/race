@@ -5,11 +5,13 @@ var car2Horn = new Audio('sound/car2.wav');
 var win = new Audio('sound/win.mp3');
 
 const car1 = {
+  color: 'Blue',
   margin: Math.floor(Math.random() * 10) + 1,
   speed: Math.floor(Math.random() * 15) + 5,
 };
 
 const car2 = {
+  color: 'Yellow',
   margin: Math.floor(Math.random() * 10) + 1,
   speed: Math.floor(Math.random() * 15) + 5,
 };
@@ -31,13 +33,17 @@ function moveFirstCar() {
   car1.margin = car1.margin + car1.speed;
   if (car1.margin >= 1400 || car2.margin >= 1400) {
     clearInterval(interval);
+    document.querySelector('.h1').innerHTML = car2.color + ' car WINS 🏆';
     document.querySelector('.flag').classList.remove('d-none');
     win.play();
-    document.querySelector('.h1').innerHTML = 'WIN 🏆';
   }
 
-  if (car1.margin >= 1200)
+  if (car1.margin >= 1200) {
     document.querySelector('.h1').classList.remove('d-none');
+    document.querySelector('.h1').innerHTML =
+      car1.color + ' car is about to win';
+    document.querySelector('.h1').classList.add('text-primary');
+  }
 }
 function moveSecondCar() {
   car2Div.addEventListener('click', function () {
@@ -47,12 +53,16 @@ function moveSecondCar() {
 
   car2Div.style.marginRight = car2.margin + car2.speed + 'px';
   car2.margin = car2.margin + car2.speed;
-  if (car2.margin >= 1400 || car1.margin >= 1400) {
+  if (car1.margin >= 1400 || car2.margin >= 1400) {
     clearInterval(interval2);
+    document.querySelector('.h1').innerHTML = car1.color + ' car WINS 🏆';
     document.querySelector('.flag').classList.remove('d-none');
     win.play();
-    document.querySelector('.h1').innerHTML = 'WIN 🏆';
   }
-  if (car2.margin >= 1200)
+  if (car2.margin >= 1200) {
     document.querySelector('.h1').classList.remove('d-none');
+    document.querySelector('.h1').innerHTML =
+      car2.color + ' car is about to win';
+    document.querySelector('.h1').classList.add('text-warning');
+  }
 }

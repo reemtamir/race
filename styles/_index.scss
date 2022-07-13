@@ -1,3 +1,7 @@
+body {
+  background-color: hsl(0, 3%, 18%);
+}
+
 div {
   width: 250px;
   height: 200px;
@@ -20,12 +24,23 @@ div {
   position: absolute;
   top: 40%;
   left: 70px;
-  background-color: black;
+  background: rgb(1, 1, 1);
+  background: linear-gradient(
+    248deg,
+    rgba(1, 1, 1, 1) 75%,
+    rgba(136, 131, 132, 1) 90%
+  );
   width: 1800px;
   height: 500px;
+  & > .flag > iframe {
+    width: 280px;
+    position: absolute;
+    top: 170px;
+    left: -10px;
+  }
 }
 .line {
-  width: 2000px;
+  width: 1800px;
   height: 2px;
   background-color: white;
   position: absolute;
