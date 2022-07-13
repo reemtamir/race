@@ -1,5 +1,5 @@
 'use strict';
-// const car1Horn =  new Audio('');
+
 var car1Horn = new Audio('sound/car1.wav');
 var car2Horn = new Audio('sound/car2.wav');
 var win = new Audio('sound/win.mp3');
@@ -15,8 +15,7 @@ const car2 = {
   margin: Math.floor(Math.random() * 10) + 1,
   speed: Math.floor(Math.random() * 15) + 5,
 };
-console.log(car1);
-console.log(car2);
+
 var interval;
 var interval2;
 interval = setInterval(moveBlueCar, 300);
