@@ -29,7 +29,7 @@ function moveBlueCar() {
     car1Horn.currentTime = 0;
   });
   car1Div.style.marginRight = car1.margin + car1.speed + 'px';
-  car1.margin = car1.margin + car1.speed;
+  car1.margin += car1.speed;
   if (car1.margin >= 1400 || car2.margin >= 1400) {
     clearInterval(interval);
     elH1.innerHTML = car2.color + ' car WINS 🏆';
@@ -50,7 +50,7 @@ function moveYellowCar() {
   });
 
   car2Div.style.marginRight = car2.margin + car2.speed + 'px';
-  car2.margin = car2.margin + car2.speed;
+  car2.margin += car2.speed;
   if (car1.margin >= 1400 || car2.margin >= 1400) {
     clearInterval(interval2);
     elH1.innerHTML = car1.color + ' car WINS 🏆';
